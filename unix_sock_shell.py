@@ -9,6 +9,7 @@ if os.path.exists(sockfile):
   os.remove(sockfile)
 s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 s.bind(sockfile)
+os.chmod(sockfile, 0o666) # you may need to change this
 s.listen(1)
 (rem, addr) = s.accept()
 os.dup2(rem.fileno(), 0)
