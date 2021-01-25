@@ -14,3 +14,5 @@ misc scripts/utils that I've written that don't deserve repos of their own.
 * imgbb.py - a small script to upload images to imgbb.com using their API, and return the direct link to the image. You will need an API key for this, which you can get at [api.imgbb.com](api.imgbb.com) by signing up for an account. imgbb doesn't compress images, which is quite handy (unlike imgur, which ruins your images).
 
 * frogger_ssh.py - quick bodge of a script based on [this blog post](https://rushter.com/blog/public-ssh-keys/), for detecting the ["FritzFrog" botnet](https://www.guardicore.com/2020/08/fritzfrog-p2p-botnet-infects-ssh-servers/). Relies on detecting if the SSH key backdoor is present. You just give it a user, host, and port.
+
+* get_favicon_hash.py - quick script to get the mmh3 hash of a favicon.ico file from some webserver so you can search for similar webservers in Shodan, etc. Very useful for finding embedded crap and enterprise shitware. Can't remember what I based this off at all. 
